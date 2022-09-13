@@ -1,57 +1,22 @@
 #include "main.h"
-
-
+#include <stdio.h>
 
 /**
+ * print_to_98 - prints from any integer to 98
+ * @n: integer input
  *
- *  * jack_bauer - prints every minute of the day
- *
- *   *
- *
- *    * Return: void
- *
- *     */
+ * Return: void
+ */
 
-
-
-void jack_bauer(void)
-
+void print_to_98(int n)
 {
-
-		int h, m, i, j, k, l;
-
-
-
-			for (h = 0; h < 24; h++)
-
-					{
-
-								i = h / 10;
-
-										j = h % 10;
-
-												for (m = 0; m < 60; m++)
-
-															{
-
-																			k = m / 10;
-
-																						l = m % 10;
-
-																									_putchar('0' + i);
-
-																												_putchar('0' + j);
-
-																															_putchar(':');
-
-																																		_putchar('0' + k);
-
-																																					_putchar('0' + l);
-
-																																								_putchar('\n');
-
-																																										}
-
-													}
-
+	while (n != 98)
+	{
+		printf("%i, ", n);
+		if (n > 98)
+			n--;
+		else
+			n++;
+	}
+	printf("98\n");
 }
