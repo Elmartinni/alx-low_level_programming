@@ -1,67 +1,25 @@
-#include <stdlib.h>
-
-#include <time.h>
-
-#include <stdio.h>
-
-
-
-/* betty style doc for function main goes there */
+#include "main.h"
 
 /**
+ * print_alphabet_x10 - entry point
  *
- *  * main - Entry point
+ * Description: Prints the alphabet with _putchar ten times
  *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
+ * Return: void
+ */
 
-int main(void)
 
+void print_alphabet_x10(void)
 {
+	char c;
+	int i;
 
-		int n;
-
-			int r;
-
-
-
-				srand(time(0));
-
-					n = rand() - RAND_MAX / 2;
-
-
-
-						r = n % 10;
-
-							if (r > 5)
-
-									{
-
-												printf("Last digit of %i is %i and is greater than 5\n", n, r);
-
-													}
-
-								else if (r == 0)
-
-										{
-
-													printf("Last digit of %i is %i and is 0\n", n, r);
-
-														}
-
-									else
-
-											{
-
-														printf("Last digit of %i is %i and is less than 6 and not 0\n", n, r);
-
-															}
-
-
-
-										return (0);
-
-}  
+	for (i = 0; i < 10; i++)
+	{
+		for (c = 'a'; c <= 'z'; c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+	}
+}
