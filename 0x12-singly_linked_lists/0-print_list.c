@@ -1,21 +1,28 @@
-#include "lists.h"
+#include "main.h"
+
 /**
- * print_list - prints all the elements  a list_t list.
- * @h: singly linked list.
- * Return: number of elements in the list.
- */
-size_t print_list(const list_t *h)
+* create_array - creates an array of chars, and
+* initializes it with a specific char.
+*@size: Size of the array
+*@c: Character to insert
+*Return: NULL if size is zero or if it fails,
+*pointer to array if everything is normal.
+*/
+
+char *create_array(unsigned int size, char c)
 {
-size_t nelem;
-nelem = 0;
-while (h != NULL)
-{
-if (h->str == NULL)
-printf("[%d] %s\n", 0, "(nil)");
-else
-printf("[%d] %s\n", h->len, h->str);
-h = h->next;
-nelem++;
-}
-return (nelem);
+	char *array;
+	unsigned int index;
+
+	if (size == 0)
+		return (NULL);
+	array = malloc(sizeof(char) * size);
+
+	if (array == NULL)
+		return (NULL);
+
+	for (index = 0; index < size; index++)
+		array[index] = c;
+
+	return (array);
 }
